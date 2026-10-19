@@ -1,0 +1,36 @@
+<div class="container">
+  <header class="header">
+    <h1>Relevés de Pollution</h1>
+    <span class="meta">API : <code>{{ apiUrl }}</code></span>
+  </header>
+
+  @if (pollutions().length > 0) {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Ville</th>
+          <th>Polluant</th>
+          <th>Valeur</th>
+          <th>Date</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of pollutions(); track p.id) {
+          <tr>
+            <td class="bold">{{ p.ville }}</td>
+            <td>{{ p.polluant }}</td>
+            <td>{{ p.valeur }} µg/m³</td>
+            <td class="date">{{ p.date }}</td>
+            <td class="desc">{{ p.description || '-' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <div class="empty">
+      <p>Chargement des données ou aucune donnée disponible.</p>
+      <small>Vérifiez que le service API est bien actif à l'adresse : <code>{{ apiUrl }}/pollutions</code></small>
+    </div>
+  }
+</div>
