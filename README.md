@@ -84,7 +84,7 @@ Le dépôt est structuré en deux parties distinctes :
    - **Génération automatique de données de démonstration** : si la table est vide lors du premier démarrage, un jeu de données initial représentatif de plusieurs villes françaises est automatiquement inséré.
 
 2. **Désactivation temporaire du JWT** :
-   - Comme demandé pour cette première séance d'introduction, la vérification des tokens JWT a été retirée des routes pour simplifier la découverte du protocole HTTP GET. Les fichiers dédiés au JWT sont conservés pour être réintroduits lors des prochains cours.
+   - Pour cette première séance d'introduction, la vérification des tokens JWT a été retirée des routes pour simplifier la découverte du protocole HTTP GET. Les fichiers dédiés au JWT seront introduits lors des prochains cours.
 
 ---
 
